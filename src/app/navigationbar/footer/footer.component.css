@@ -1,0 +1,11 @@
+#body3 {
+    height: 400px;
+    background: #D3D3D3;
+
+}
+@media only screen and (max-width: 600px) {
+    #body3 {
+      height: 650px;
+    }
+    
+  }

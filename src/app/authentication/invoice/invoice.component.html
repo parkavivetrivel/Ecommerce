@@ -1,0 +1,93 @@
+
+<div id="orderbg">
+  <br><br>
+<div class="container">
+  <form name="order">
+  <div class="row">
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 p-5">
+        <div id ="box">
+      <h1 class="display-6"><div class="text-center">
+        Thanks for using our Laundry Basket</div></h1><br><br>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+      <!-- <br><table class="table table-hover"> -->
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <div class="receipt-left">
+          <h3>INVOICE</h3>
+        </div>
+      </div>
+    </div>
+        </div>
+  
+        <div>
+            <table class="table table-unbordered">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-md-9"> No of shirts</td>
+                        <td class="col-md-3"><p id="shirts">{{orderDetails.NoOfShirts}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-9">No of pants</td>
+                        <td class="col-md-3"><p id = "pants">{{orderDetails.NoOfPants}}</p></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-9">No of ladiestop</td>
+                        <td class="col-md-3"><p id ="ladiestop">{{orderDetails.NoOfLadiesTop}}</p></td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-9">No of blouse</td>
+                      <td class="col-md-3"><p id="blouse">{{orderDetails.NoOfBlouse}}</p></td>
+                  </tr>
+                  <tr>
+                    <td class="col-md-9">No of dhoti</td>
+                    <td class="col-md-3"><p id="dhoti">{{orderDetails.NoOfDhoti}}</p></td>
+                </tr>
+                <tr>
+                  <td class="col-md-9">No of saree</td>
+                  <td class="col-md-3"><p id="saree">{{orderDetails.NoOfSaree}}</p></td>
+              </tr>
+              <tr>
+                <td class="col-md-9">No of shaul</td>
+                <td class="col-md-3"><p id="shaul">{{orderDetails.NoOfShaul}}</p></td>
+            </tr>
+                    <tr>
+                        <td class="text-right">
+                        <p>
+                            <strong>Total Item: </strong>
+                        </p>
+                        <p>
+                            <strong>Total Amount: </strong>
+                        </p>
+          </td>
+                        <td>
+                        <p>
+                            <strong><i class="fa fa-inr"></i>{{orderDetails.totalitems}}</strong>
+                        </p>
+                        <p>
+                            <strong><i class="fa fa-inr"></i>{{orderDetails.totalamount}}/-</strong>
+                        </p>
+          
+          </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        </div>
+    <div class="col-sm-1"></div>            
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+<br><br>
+</div></div>
+
+

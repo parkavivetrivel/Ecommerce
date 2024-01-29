@@ -1,0 +1,56 @@
+<!-- <h1>Create Profile</h1>
+<hr />
+<form >
+  <div>
+    <input formControlName="name" type="text" placeholder="Enter name..." />
+  </div>
+  <div>
+    <input (change)="onFileSelect($event)" type="file" />
+  </div>
+  <div *ngIf="imageData">
+    <img [src]="imageData" [alt]="form.value.name" />
+  </div>
+  <div>
+    <button type="submit">Create profile</button>
+  </div>
+</form> -->
+<div id="body">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-8"></div>
+      <div class="col-sm-4"><br><br>
+        <form [formGroup]="form" (submit)="onSubmit()">
+          <div id="box">
+            <h1 class="display-6"></h1>
+            <label>Product Name</label>
+            <input formControlName="name" class="form-control" type="text" placeholder="Enter name..." />
+            <p id="validation"></p>
+
+            <label>Product Images</label>
+            <input (change)="onFileSelect($event)" type="file" class="form-control" />
+            <p id="validation1"></p>
+
+            <div class="text-center">
+              <div *ngIf="imageData">
+                <img [src]="imageData" [alt]="form.value.name" class="form-control" />
+              </div>
+            </div>
+
+            <label>Product Price</label>
+            <input formControlName="price" class="form-control" type="number" placeholder="Enter price..." />
+            <p id="validationPrice"></p>
+
+            <label>Product Description</label>
+            <textarea formControlName="description" class="form-control" placeholder="Enter description..."></textarea>
+            <p id="validationDescription"></p>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark">Create Product</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

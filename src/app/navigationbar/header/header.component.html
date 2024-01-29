@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar ">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand" style="font-size: 20px">
+            <h2 style="font-size: 30px;">The E-commerce website</h2>
+        </a>
+        <button class="navbar-toggler btn btn-outline" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"  aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active" >
+                  <a class="nav-link"  routerLink="/login" *ngIf="!username">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/signup" *ngIf="!username">SIGNUP</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link disabled" *ngIf="username"><i class='fa fa-user' ></i> {{username|titlecase}}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/createProduct" *ngIf="username">POST PRODUCT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/entireProduct" *ngIf="username">PRODUCTS</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" routerLink="/" *ngIf="username">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/order" *ngIf="username">ORDER</a>
+                </li> -->
+                <li class="nav-item" >
+                    <a  class="nav-link"(click)="logout()" *ngIf="username"><i class="fa fa-power-off"></i>
+                   LOGOUT</a>
+                </li>
+              </ul>
+           
+        </div>
+        </div>
+</nav>
+

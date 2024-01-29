@@ -1,0 +1,164 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="zoom">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <div class="d-flex flex-column align-items-center">
+              <img src="../../../assets/Ecommerce web page-pana.png" alt="Slide 1" class="img-fluid">
+              <div class="mt-2 text-center">
+                <h3>ORDER</h3>
+                <p></p>
+                <br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="d-flex flex-column align-items-center">
+              <img src="../../../assets/In no time-amico.png" alt="Slide 1" class="img-fluid">
+              <div class="mt-2 text-center">
+                <h3>SELECT</h3>
+                <p></p>
+                <br>
+              </div>
+            </div>  
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="d-flex flex-column align-items-center">
+              <img src="../../../assets/In no time-pana.png" alt="Slide 1" class="img-fluid">
+              <div class="mt-2 text-center">
+                <h3>RECIEVE</h3>
+                <p></p>
+                <br>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      </div>      
+    <div class="col-sm-3">
+      <div class="zoom">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img src="../../../assets/Ecommerce web page-pana.png" alt="Slide 1" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-amico.png" alt="Slide 2" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-pana.png" alt="Slide 3" height="100%" width="100%">
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="zoom">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img src="../../../assets/Ecommerce web page-pana.png" alt="Slide 1" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-amico.png" alt="Slide 2" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-pana.png" alt="Slide 3" height="100%" width="100%">
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="zoom">
+        <ngb-carousel>
+          <ng-template ngbSlide>
+            <img src="../../../assets/Ecommerce web page-pana.png" alt="Slide 1" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-amico.png" alt="Slide 2" height="100%" width="100%">
+          </ng-template>
+          <ng-template ngbSlide>
+            <img src="../../../assets/In no time-pana.png" alt="Slide 3" height="100%" width="100%">
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-3">
+    </div>
+  </div>
+</div>
+<!-- <div *ngIf="products.length > 0" class="container">
+  <div class="row">
+    <div *ngFor="let profile of products" class="col-md-4">
+      <div class="card">
+        <img [src]="profile.imagePath" [alt]="profile.name" class="card-img-top img-thumbnail"
+          style="width: 400px; height: 250px;" />
+        <div class="card-body">
+          <h5>{{ profile.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <h2 class="text-center mb-4"></h2>
+  <div class="row">
+    <!-- Product cards go here -->
+    <!-- Example card: -->
+    <div *ngFor="let profile of products" class=" col-md-3 mb-4">
+      <div  class="card hover-effect">
+        <img [src]="profile.imagePath" [alt]="profile.name" height="150px" width="200px" class="card-img-top img-thumbnail" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ profile.name |titlecase}}</h5>
+          <p class="card-text text-center">Product Price : &#x20B9;{{profile.price}}</p>
+          <!-- <p class="card-text">Product Discription : {{profile.description|titlecase}}</p> -->
+          <div class="text-center">
+            <button (click)="addToCart(profile)" type="submit" class="btn btn-dark">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat the above card structure for other featured products -->
+  </div>
+</div>
+

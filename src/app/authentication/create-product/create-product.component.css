@@ -1,0 +1,54 @@
+#body {
+    background-image: url("../../../assets/pexels-ron-lach-10565603.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      color: #000000;
+      margin-top: -80px;
+      padding-top: 80px;
+      min-height: 100vh;
+  
+    }
+  
+    a:link {
+      text-decoration: none;
+    }
+  
+    a:visited {
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: none;
+    }
+  
+    a:active {
+      text-decoration: none;
+    }
+  
+    h1,a {
+      text-align: center;
+    }
+    .margin {
+      margin: 30% 5% 5% 5%;
+    }
+    #thappu {
+      color: red;
+    }
+  
+    #box {
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #validation1 {
+      color: red;
+    }
+  
+    
+    @media only screen and (max-width: 992px) {
+      #body {
+        margin-top: -170px;
+      }
+    }

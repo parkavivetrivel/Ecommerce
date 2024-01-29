@@ -1,0 +1,63 @@
+<div id="body">
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4">
+    <img src="../../../assets/03-42-11-849_512.webp" height="275px" width="220px" style="margin-left: 50%;margin-right: 50%;margin-top: 50%;" alt="er" *ngIf="showGif">
+ 
+</div>
+</div>
+</div> 
+  <br>
+  <div class="container mt-5" *ngIf="loginCard">
+    <div class="row">
+      <div class="col-sm-8"></div>
+      <div class="col-sm-4"><br><br>
+        <form class="login_form" role="form" [formGroup]="login" (ngSubmit)="loginuserdata(login.value)"
+          class="inputUsersForm">
+          <div id="box">
+            <h1 class="display-6">Login</h1>
+            <label>Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username"
+              formControlName="username">
+            <p id="validation"></p>
+            <label>Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password"
+              formControlName="password">
+            <p id="validation1"></p>
+            <div class="text-center">
+              <button class="btn btn-primary" type="submit" class="btn btn-dark" [disabled]="!login.valid">Login</button><br>
+            </div>
+            <div class="text-center">
+              <a routerLink="/signup" style="color: black;">Need an account?
+                <span style="color: rgb(41, 41, 199);">Signup</span> </a>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+      </div>
+      <div class="container mt-5 margins" >
+        <div class="row" *ngIf="loginFailed">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4"><br><br>
+                <div id="box">
+                    <h1 class="display-6">Login Failed</h1>
+                    <p id="thappu">
+                        <a class="nav-link"(click)="refreshLogin()">Try once again to login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+       </div>
+      
+       
+      <router-outlet></router-outlet>

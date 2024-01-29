@@ -1,0 +1,86 @@
+
+  #body {
+    
+    background-attachment: fixed;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -80px;
+  padding-top: 80px;
+  min-height: 100vh;
+
+}
+
+input[type='number']{
+    width: 50px;
+} 
+
+#body1 {
+    height: 650px;
+    background: #D3D3D3;
+}
+
+#body2 {
+    height: 650px;
+    background: #1a224a;
+}
+
+#body3 {
+    height: 400px;
+    background: #D3D3D3;
+}
+
+p.light {
+    font: weight 90px;
+    ;
+}
+
+.p {
+    left: 20x;
+
+}
+
+.margin {
+    margin-top: 7px;
+}
+
+#box {
+    border-radius: 20px;
+    background-color: rgb(252, 250, 250);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+    border: 20px;
+    outline: none;
+    border-radius: 10px;
+   
+
+
+}
+
+
+.form-control {
+    width: 70%;
+
+}
+
+p.c {
+    white-space: pre;
+}
+
+.left-button {
+    float: right;
+}
+.right-button1 {
+    float: left;
+}
+
+.right-button {
+    float: left;
+}
+.my-input {
+    min-width: 1px;
+    /* Adjust this value to set the minimum input field size */
+}

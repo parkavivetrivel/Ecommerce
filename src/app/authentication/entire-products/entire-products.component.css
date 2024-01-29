@@ -1,0 +1,248 @@
+
+
+#body{
+    background-image: url('../../../assets/pexels-photo-3965545.jpeg');
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -80px;
+    padding-top: 80px;
+    min-height: 100vh;
+  }
+  #body2 {
+      height: 650px;
+      background: #7a7968;
+      min-height: 100vh;
+  
+  }
+  .gallery {
+      --s: 300px;
+      display: grid;
+      width: var(--s);
+      aspect-ratio: 1;
+      overflow: hidden;
+      padding: calc(var(--s)/20);
+      border-radius: 0%;
+      position: relative;
+    }
+  
+    .gallery>img,
+    .gallery>div {
+      grid-area: 1/1;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      transform-origin: 100% 120.7%;
+      animation: m 8s infinite cubic-bezier(.5, -0.2, .5, 1.2);
+    }
+  
+    .gallery>img:nth-child(2),
+    .gallery>div:nth-child(2) {
+      animation-delay: -2s;
+    }
+  
+    .gallery>img:nth-child(3),
+    .gallery>div:nth-child(3) {
+      animation-delay: -4s;
+    }
+  
+    .gallery>img:nth-child(4),
+    .gallery>div:nth-child(4) {
+      animation-delay: -6s;
+    }
+  
+    @keyframes m {
+  
+      0%,
+      3% {
+        transform: rotate(0);
+      }
+  
+      22%,
+      27% {
+        transform: rotate(-90deg);
+      }
+  
+      47%,
+      52% {
+        transform: rotate(-180deg);
+      }
+  
+      72%,
+      77% {
+        transform: rotate(-270deg);
+      }
+  
+      98%,
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  
+  
+  
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+    }
+  
+    #body1 {
+  
+      background: #ffffff;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  
+    }
+  
+    #body3 {
+      background: #ffffff;
+  
+  
+    }
+  
+    .bordered-text {
+      border: 1px solid black;
+      display: inline;
+      padding: 5px;
+    }
+  
+    .transparent-text {
+      font-size: 24px;
+      opacity: 0.20;
+    }
+  
+    .no-inner-color {
+      color: transparent;
+    }
+  
+    .shadow-text {
+      text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .container1 {
+      width: 150px;
+      height: 225px;
+      position: relative;
+      margin: 30px;
+    }
+  
+    .container2 {
+      width: 200px;
+      height: 150px;
+      position: relative;
+      margin: 9px;
+    }
+  
+    .box {
+  
+      position: absolute;
+      top: 10px;
+      left: 0;
+      border-color: black;
+  
+      background: #0057e3;
+    }
+    .box1 {
+      z-index: 300;
+  position: absolute;
+  top: -50px;
+  left:210px;
+  border-color: black;
+  background: #0057e3;
+  }
+  
+    .overlay {
+      z-index: 100;
+      margin: 110px;
+      border-color: black;
+    }
+  
+    .overlay1 {
+      z-index: 300;
+      margin: 160px;
+      top: -70px;
+      left: 180px;
+      border-color: black;
+  
+    }
+  
+    @media only screen and (min-width: 770px) {
+      #smallScreen {
+        display: none;
+      }
+      #bigScreen{
+        display: block;
+      }
+    }
+  
+    @media only screen and (max-width: 770px) {
+      #smallScreen {
+        display: block;
+      }
+      #bigScreen{
+        display: none;
+      }
+    }
+  
+    #smallScreen{
+      margin-top: 60px;
+    }
+  
+    @media only screen and (max-width: 992px) {
+      #body {
+        margin-top: -170px;
+      }
+    }
+  
+    @media only screen and (max-width: 600px) {
+      #body2 {
+        height: 900px;
+      }
+      
+    }
+    @media only screen and (max-width: 574px) {
+      #body {
+        background-image: url('../../../assets/pexels-karolina-grabowska-4210341.jpg');
+      }
+      
+    }
+    .zoom {
+      padding: 50px;
+      /* background-color: green; */
+      transition: transform .2s;
+      /* width: 200px;
+      height: 200px; */
+      margin: 0 auto;
+    }
+    .zoom:hover {
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5); 
+    }
+    .carousel-slide {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .carousel-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    .carousel-caption {
+      text-align: center;
+      margin-top: 10px; /* Adjust as needed */
+    }
+    /* your-component.component.css */
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+}

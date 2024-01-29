@@ -1,0 +1,117 @@
+<!--     
+<div class="container mt-5"  >
+  <div class="row">
+    <div class="col-sm-3"></div>
+   
+      <div class="col-sm-6">
+          <div id="box">
+              <div class="tab-content">
+                  <div id="home" class="container tab-pane active"><br>
+                      <h3>
+                          ORDER NOW
+                      </h3>
+                      <div class="form-outline">
+                           <form class="login_form" role="form" [formGroup]="orders"
+                              (ngSubmit)="orderuserdata(orders.value)"
+                               class="inputUsersForm">
+                              Service Type
+                              <hr style="height:1px;border-width:1px;color:black;background-color:black">
+                              <p class="">
+                                  <input type="radio" name="servicetype" value="Steam&Ironing" [(ngModel)]="selectedService" (click)="selectedServices()"><label
+                                      for="">&nbsp; Steam Ironing &nbsp;</label>
+                                  <input type="radio" name="servicetype" value="Washing&Pressing" (change)="selectedServices()"><label
+                                      for="vehicle2">&nbsp; Washing & Pressing &nbsp;</label>
+                                  <input type="radio" name="servicetype" value="Both" (change)="selectedServices()"><label
+                                      for="vehicle2">&nbsp; Both &nbsp;</label><br>
+                              </p>
+                              Service Items
+                              <hr style="height:1px;border-width:1px;color:black;background-color:black">
+                              <p id="shirts" name="vehicle1"><label for="">Shirts&nbsp;&nbsp;8 X</label>
+                                  <input type="number" id="my-input1" class="e-input" size="1" value="0"
+                                      [(ngModel)]="NoOfShirts" formControlName="NoOfShirts" min="0"
+                                      class="left-button">
+                              </p>
+                              <p id="vehicle2" name="vehicle2"><label for="vehicle2">Pants&nbsp;&nbsp;8
+                                      X</label>
+                                  <input type="number" id="my-input2" size="1" value="0" [(ngModel)]="NoOfPants"
+                                      class="left-button" formControlName="NoOfPants"  min="0">
+                              </p>
+                              <p id="ladies" name=""><label for="vehicle2">Ladies Top&nbsp;&nbsp;9 X
+                                  </label>
+                                  <input type="number" id="my-input3" size="1" value="0" [(ngModel)]="NoOfLadiesTop"
+                                      class="left-button" formControlName="NoOfLadiesTop"  min="0">
+                              </p>
+                              <p id="vehicle2" name="vehicle2"><label for="vehicle2">Blouse&nbsp;&nbsp;5
+                                      X</label>
+                                  <input type="number" id="my-input4" size="1" value="0" [(ngModel)]="NoOfBlouse"
+                                      class="left-button" formControlName="NoOfBlouse" min="0">
+                              </p>
+                              <p id="vehicle2" name="vehicle2"><label for="vehicle2">Dhoti&nbsp;&nbsp;15
+                                      X</label>
+                                  <input type="number" id="my-input5" size="1" value="0" [(ngModel)]="NoOfDhoti"
+                                      class="left-button" formControlName="NoOfDhoti" min="0">
+                              </p>
+                              <p id="vehicle2" name="vehicle2"><label for="vehicle2">Saree&nbsp;&nbsp;40
+                                      X</label>
+                                  <input type="number" id="my-input6" size="1" value="0" [(ngModel)]="NoOfSaree"
+                                      class="left-button" formControlName="NoOfSaree" min="0">
+                              </p>
+                              <p id="vehicle2" name="vehicle2"><label for="vehicle2">Shaul&nbsp;&nbsp;8
+                                      X</label>
+                                  <input type="number" id="my-input7" size="1" value="0" [(ngModel)]="NoOfShaul"
+                                      class="left-button" formControlName="NoOfShaul" min="0">
+                              </p>
+                              <br>
+                              Order Summary
+                              <hr style="height:1px;border-width:1px;color:black;background-color:black">
+
+
+                              <p class="right-button">
+                                  Total Items in the cart
+                              </p>
+                              <p class="left-button" formControlName="totalitems">
+                                  {{NoOfShirts+NoOfPants+NoOfLadiesTop+NoOfBlouse+NoOfDhoti+NoOfSaree+NoOfShaul}}
+                              </p>
+                              <br>
+                              <p class="right-button">
+                                  Total Amount
+                              </p>
+
+                              <p class="left-button" >
+                                  {{8*NoOfShirts+8*NoOfPants+9*NoOfLadiesTop+5*NoOfBlouse+15*NoOfDhoti+40*NoOfSaree+8*NoOfShaul|currency:'INR'}}
+                              </p>
+                              <br>
+                              <button type="submit"class="btn btn-dark">order</button>
+                           </form>
+                          <br><br>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-3"></div>
+      
+  </div> -->
+  <!-- order.component.html -->
+  <div class="container">
+    <h2 class="text-center mb-4"></h2>
+    <div class="row">
+      <!-- Product cards go here -->
+      <!-- Example card: -->
+      <div *ngFor="let profile of cartProduct" class=" col-md-3 mb-4">
+        <div  class="card hover-effect">
+          <img [src]="profile.imagePath" [alt]="profile.name" height="150px" width="200px" class="card-img-top img-thumbnail" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ profile.name |titlecase}}</h5>
+            <p class="card-text text-center">Product Price : &#x20B9;{{profile.price}}</p>
+            <!-- <p class="card-text">Product Discription : {{profile.description|titlecase}}</p> -->
+            <div class="text-center">
+                <button class="btn btn-danger">Clear Selected Product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above card structure for other featured products -->
+    </div>
+  </div> 
