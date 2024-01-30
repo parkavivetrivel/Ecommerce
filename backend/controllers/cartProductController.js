@@ -42,11 +42,29 @@ const postcartProduct = asyncHandler(async (req, res) => {
     res.send(orders);
     }
     finally{
-      await client.close();
+      // await client.close();
+    }
+
+ });
+
+ const deleteCartProduct = asyncHandler(async(req,res) => {
+  try{
+    await client.connect();
+    const db = client.db('test');
+    const collection = db.collection('cartproduct')
+    const productId = req.params.name;
+    console.log('Received productId:', productId)
+    const myquery = { name:productId};
+    const result = await collection.deleteOne(myquery);
+    console.log("deleted")
+    res.send(true);
+    }
+    finally{
+      // await client.close();
     }
 
  });
 
 module.exports = {
-    postcartProduct,getcartProduct
+    postcartProduct,getcartProduct,deleteCartProduct
 }

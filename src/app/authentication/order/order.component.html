@@ -107,7 +107,7 @@
             <p class="card-text text-center">Product Price : &#x20B9;{{profile.price}}</p>
             <!-- <p class="card-text">Product Discription : {{profile.description|titlecase}}</p> -->
             <div class="text-center">
-                <button class="btn btn-danger">Clear Selected Product</button>
+                <button (click)="clearSelectedProduct(profile)" class="btn btn-danger">Clear Selected Product</button>
             </div>
           </div>
         </div>
